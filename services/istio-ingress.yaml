@@ -5,7 +5,7 @@ metadata:
     istio: ingress
   name: istio-ingress
 spec:
-  externalTrafficPolicy: Local
+#  externalTrafficPolicy: Local
   ports:
     - name: http
       port: 80

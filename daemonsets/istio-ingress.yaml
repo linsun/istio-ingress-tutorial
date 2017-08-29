@@ -10,20 +10,20 @@ spec:
       labels:
         istio: ingress
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: dedicated
-                    operator: In
-                    values:
-                      - istio-ingress
-      tolerations:
-        - key: dedicated
-          operator: "Equal"
-          value: istio-ingress
-          effect: "NoSchedule"
+#      affinity:
+#        nodeAffinity:
+#          requiredDuringSchedulingIgnoredDuringExecution:
+#            nodeSelectorTerms:
+#              - matchExpressions:
+#                  - key: dedicated
+#                    operator: In
+#                    values:
+#                      - istio-ingress
+#      tolerations:
+#        - key: dedicated
+#          operator: "Equal"
+#          value: istio-ingress
+#          effect: "NoSchedule"
       serviceAccountName: istio-ingress
       containers:
         - name: istio-ingress

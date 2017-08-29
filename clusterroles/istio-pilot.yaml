@@ -12,3 +12,6 @@ rules:
   - apiGroups: ["istio.io"]
     resources: ["istioconfigs", "istioconfigs.istio.io"]
     verbs: ["*"]
+  - apiGroups: [""]
+    resources: ["namespaces", "nodes", "secrets"]
+    verbs: ["get", "list", "watch"]    
